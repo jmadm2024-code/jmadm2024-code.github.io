@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JM Administración · Servicios administrativos para emprendedores en Azul</title>
-<meta name="description" content="Monotributo, habilitaciones, costos y precios, planillas a medida y seguimiento mensual para emprendedores, monotributistas y comercios de Azul y la zona.">
+<meta name="description" content="Seguimiento de monotributo, habilitaciones, costos y precios, planillas a medida y seguimiento mensual para emprendedores, monotributistas y comercios de Azul y la zona.">
 <meta property="og:title" content="JM Administración · Servicios administrativos en Azul">
 <meta property="og:description" content="Ordenamos la parte administrativa de tu negocio para que vos te dediques a hacerlo crecer.">
+<meta property="og:image" content="https://jmadm2024-code.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B1F3A">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +40,7 @@ header.s{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);box-shadow:
 .logo{font-size:1.2rem;font-weight:600;letter-spacing:-.02em;text-decoration:none;color:#fff;display:flex;align-items:center;gap:9px;transition:color .5s ease}
 .logo::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--teal)}
 header.s .logo{color:var(--navy)}
-nav{display:flex;align-items:center;gap:38px}
+nav{display:flex;align-items:center;gap:30px}
 nav a{font-size:.93rem;font-weight:500;text-decoration:none;color:rgba(255,255,255,.82);transition:color .5s ease}nav a:hover{color:#fff}
 header.s nav a{color:var(--mute)}header.s nav a:hover{color:var(--navy)}
 nav .btn{padding:12px 26px;font-size:.88rem;background:#fff;color:var(--navy);transition:background .5s ease,color .5s ease}header.s nav .btn{background:var(--navy);color:#fff}
@@ -94,7 +96,7 @@ input[type=range]::-moz-range-thumb{height:16px;width:16px;border-radius:50%;bac
 .step h3{margin-bottom:10px}.step p{color:var(--mute);font-size:.97rem}
 /* plans */
 .plans{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:70px}
-.pl{border:1px solid var(--line);border-radius:30px;padding:52px 46px;display:flex;flex-direction:column}
+.pl{background:#fff;border:1px solid var(--line);border-radius:30px;padding:52px 46px;display:flex;flex-direction:column}
 .pl.dk{background:var(--navy);border-color:var(--navy);color:#cfdbee;position:relative;box-shadow:0 0 0 2px var(--teal),0 40px 70px -26px rgba(63,184,176,.45)}
 .rec{position:absolute;top:-14px;right:36px;background:var(--teal);color:var(--navy);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:99px}
 .pl small{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-d)}.pl.dk small{color:var(--teal-l)}
@@ -106,13 +108,24 @@ input[type=range]::-moz-range-thumb{height:16px;width:16px;border-radius:50%;bac
 .pl .btn{width:100%}
 .nota{text-align:center;color:var(--mute);font-size:.93rem;margin-top:30px}
 /* about */
-.about{background:var(--cream)}
+.about{background:#fff}
 .ab{display:grid;grid-template-columns:.9fr 1.1fr;gap:100px;align-items:center}
 .vals{margin-top:44px;display:grid;gap:26px}
 .vals div{display:grid;grid-template-columns:44px 1fr;gap:18px}
 .vals i{font:italic 400 1.7rem/1.2 var(--serif);color:var(--teal-d)}
 .vals b{display:block;color:var(--navy);font-weight:600}.vals span{color:var(--mute);font-size:.96rem}
 .about .lead{margin-top:26px}
+.ex{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;text-align:left}
+.mc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 24px 44px -30px rgba(11,31,58,.4)}
+.chip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-d);background:#e4f6f5;padding:4px 11px;border-radius:99px;margin-bottom:16px}
+.mc h3{margin-bottom:6px}.mc>p{color:var(--mute);font-size:.92rem}
+.tb{margin-top:18px;font-size:.86rem;font-variant-numeric:tabular-nums}
+.tb div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.tb div:first-child{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--mute);font-weight:700}
+.tb .tt{font-weight:800;color:var(--navy);border-bottom:0}
+.neg{color:#b4472f}.ok{color:var(--teal-d);font-weight:700}.wn{color:#b8791a;font-weight:700}
+.bs{display:flex;align-items:flex-end;gap:8px;height:64px;margin-top:14px}.bs i{flex:1;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,var(--teal),#9be4de)}
+#planes,#faq{background:var(--cream)}
 /* faq */
 .fq{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}
 details{border-bottom:1px solid var(--line);padding:26px 0}details:first-child{border-top:1px solid var(--line)}
@@ -129,17 +142,19 @@ form{background:#fff;color:var(--ink);border-radius:30px;padding:46px}
 label{display:block;font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:8px}
 input,select,textarea{width:100%;padding:15px 18px;border:1.5px solid var(--line);border-radius:14px;font:500 .97rem var(--sans);margin-bottom:22px;background:#fff;color:var(--ink);transition:.2s}
 input:focus,select:focus,textarea:focus{outline:0;border-color:var(--teal);box-shadow:0 0 0 4px rgba(63,184,176,.18)}
+.pv{margin-top:14px;font-size:.78rem;color:var(--mute);text-align:center}
 textarea{min-height:100px;resize:vertical}form .btn{width:100%}
 footer{background:#071526;color:#8ea3c0;padding:48px 0;font-size:.9rem}
 .ft{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 footer .logo{color:#fff}.ft div:last-child{display:flex;gap:30px}footer a{text-decoration:none}footer a:hover{color:#fff}
+.dsc{margin-top:22px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:.8rem;color:#6f86a8}
 .wa{position:fixed;right:18px;bottom:18px;z-index:60;width:52px;height:52px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.18);transition:.2s}.wa:hover{transform:scale(1.08)}.wa svg{width:27px;height:27px;fill:#fff}
 .rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
 @media(max-width:960px){
 section,.ct{padding:84px 0}.wrap{padding:0 22px}
 .hero{padding:140px 0 80px}.hero .wrap,.ab,.fq,.cg,.plans{grid-template-columns:1fr;gap:56px}
 .sim{padding:28px 22px}.facts{gap:26px;flex-wrap:wrap}
-.grid6{grid-template-columns:1fr}.sv,.sv:nth-child(n+4){grid-column:auto}.n{margin-bottom:26px}
+.grid6,.ex{grid-template-columns:1fr}.sv,.sv:nth-child(n+4){grid-column:auto}.n{margin-bottom:26px}
 .steps{grid-template-columns:1fr 1fr}.pl{padding:38px 28px}form{padding:30px 24px}
 .bur{display:block}
 nav{position:absolute;top:80px;left:14px;right:14px;background:#fff;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.25);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;display:none}
@@ -153,24 +168,24 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
 <header id="hd"><div class="wrap bar">
   <a class="logo" href="#inicio">JM Administración</a>
   <button class="bur" id="bur" aria-label="Abrir menú"><i></i><i></i></button>
-  <nav id="nv"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#planes">Planes</a><a href="#nosotros">Nosotros</a><a href="#faq">Preguntas</a><a class="btn" href="#contacto">Consultanos</a></nav>
+  <nav id="nv"><a href="#servicios">Servicios</a><a href="#ejemplos">Ejemplos</a><a href="#proceso">Cómo trabajamos</a><a href="#planes">Planes</a><a href="#nosotros">Nosotros</a><a href="#faq">Preguntas</a><a class="btn" href="#contacto">Consultanos</a></nav>
 </div></header>
 
 <main id="inicio">
 <div class="hero"><div class="wrap">
   <div>
     <h1>Sabé cuánto ganás y <em>ordená tu negocio.</em></h1>
-    <p class="lead">Monotributo, costos y gestión mensual para emprendedores de Azul, con trato cercano y sin vueltas.</p>
+    <p class="lead">Costos, números y gestión mensual para emprendedores de Azul, con trato cercano y sin vueltas.</p>
     <div class="acts"><a class="btn b1" href="#contacto">Pedí tu consulta sin cargo</a><a class="btn b2" href="#servicios">Conocé los servicios</a></div>
     <div class="facts"><div><b>Azul y la zona</b><span>Presencial y a distancia</span></div><div><b>Primera charla</b><span>Sin costo ni compromiso</span></div></div>
   </div>
   <div class="sim">
     <div class="st"><div><small>Calculá tu meta del mes</small><h3>¿Cuánto tenés que vender?</h3></div><span class="bdg">Gratis</span></div>
     <div class="sr"><div class="sl"><span>Gastos fijos mensuales</span><b id="lf">$ 800.000</b></div><input type="range" id="rf" min="150000" max="3000000" step="50000" value="800000" aria-label="Gastos fijos mensuales"></div>
-    <div class="sr"><div class="sl"><span>Margen promedio sobre ventas</span><b id="lm">35%</b></div><input type="range" id="rm" min="10" max="75" step="1" value="35" aria-label="Margen promedio"></div>
+    <div class="sr"><div class="sl"><span>Margen de contribución</span><b id="lm">35%</b></div><input type="range" id="rm" min="10" max="75" step="1" value="35" aria-label="Margen de contribución"></div>
     <div class="sr"><div class="sl"><span>Ganancia que querés lograr</span><b id="lg">$ 600.000</b></div><input type="range" id="rg" min="100000" max="3000000" step="50000" value="600000" aria-label="Ganancia deseada"></div>
     <div class="so"><div><small>Ventas mínimas para no perder</small><strong id="oe">$ 2.285.714</strong></div><div class="hi"><small>Ventas para tu ganancia</small><strong id="om">$ 4.000.000</strong></div></div>
-    <p class="sf">Es una estimación. En tu consulta calculamos tus costos reales y el precio justo para cada producto. <a href="#contacto" id="sl">Quiero conocer mis números →</a></p>
+    <p class="sf"><b>Margen de contribución:</b> lo que queda de cada venta después de pagar mercadería o insumos. El cálculo no incluye impuestos ni comisiones. En tu consulta calculamos tus costos reales. <a href="#contacto" id="sl">Quiero conocer mis números →</a></p>
   </div>
 </div></div>
 
@@ -182,7 +197,7 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
 <section id="servicios" style="padding-top:0"><div class="wrap">
   <div class="head rv"><div><span class="kicker">Servicios</span><h2>Lo que hacemos <em>por tu negocio</em></h2></div><p class="lead">Cinco áreas pensadas para emprendedores, monotributistas y comercios que necesitan ordenar su parte administrativa.</p></div>
   <div class="grid6 rv">
-    <div class="sv"><span class="n">01</span><h3>Monotributo</h3><p>Alta, recategorización, facturación y VEP mensual. Te avisamos antes de cada vencimiento.</p></div>
+    <div class="sv"><span class="n">01</span><h3>Monotributo al día</h3><p>Recordatorios, organización de tu documentación y seguimiento de tu categoría y tus vencimientos.</p></div>
     <div class="sv"><span class="n">02</span><h3>Habilitaciones</h3><p>Te acompañamos paso a paso para habilitar tu local o tu actividad.</p></div>
     <div class="sv"><span class="n">03</span><h3>Costos y precios</h3><p>Calculamos cuánto te cuesta cada producto para que sepas qué precio poner y cuánto ganás.</p></div>
     <div class="sv"><span class="n">04</span><h3>Planillas a medida</h3><p>Ventas, gastos y stock en Excel o Google Sheets, a medida de tu negocio y simples de usar.</p></div>
@@ -200,14 +215,28 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
   </div>
 </div></section>
 
+<section id="ejemplos"><div class="wrap c">
+  <div class="rv"><span class="kicker">Ejemplos de trabajo</span><h2>Así ordenamos <em>un negocio</em></h2><p class="lead" style="margin:22px auto 0">Algunas de las planillas e informes que armamos. Los datos son ficticios y solo ilustran el formato.</p></div>
+  <div class="ex rv">
+    <div class="mc"><span class="chip">Datos ficticios</span><h3>Ventas y gastos</h3><p>Cada movimiento registrado, con el saldo siempre a la vista.</p>
+      <div class="tb"><div><span>Concepto</span><span>Monto</span></div><div><span>Venta mostrador</span><span>$ 48.500</span></div><div><span>Compra de insumos</span><span class="neg">− $ 21.300</span></div><div><span>Venta por encargue</span><span>$ 76.000</span></div><div class="tt"><span>Saldo del período</span><span>$ 103.200</span></div></div></div>
+    <div class="mc"><span class="chip">Datos ficticios</span><h3>Control de stock</h3><p>Sabés qué tenés y qué conviene reponer antes de quedarte sin.</p>
+      <div class="tb"><div><span>Producto</span><span>Stock</span></div><div><span>Producto A</span><span class="ok">24 · OK</span></div><div><span>Producto B</span><span class="wn">6 · Reponer</span></div><div><span>Producto C</span><span class="ok">15 · OK</span></div><div class="tt"><span>Productos a reponer</span><span>1</span></div></div></div>
+    <div class="mc"><span class="chip">Datos ficticios</span><h3>Informe mensual</h3><p>Ventas, costos y ganancia explicados en lenguaje simple.</p>
+      <div class="tb"><div><span>Resumen</span><span>Mes</span></div><div><span>Ventas</span><span>$ 1.240.000</span></div><div><span>Costos</span><span class="neg">− $ 772.000</span></div><div class="tt"><span>Ganancia · margen 38%</span><span>$ 468.000</span></div></div>
+      <div class="bs"><i style="height:42%"></i><i style="height:58%"></i><i style="height:50%"></i><i style="height:72%"></i><i style="height:66%"></i><i style="height:92%"></i></div></div>
+  </div>
+  <p style="margin-top:44px"><a class="btn b3" href="#contacto">Quiero algo así para mi negocio</a></p>
+</div></section>
+
 <section id="planes"><div class="wrap">
   <div class="rv" style="text-align:center"><span class="kicker">Planes de seguimiento mensual</span><h2>Elegí cuánto querés <em>delegar</em></h2><p class="lead" style="margin:22px auto 0">Dos opciones simples. Consultanos por los valores actualizados.</p></div>
   <div class="plans rv">
     <div class="pl"><small>Para estar al día</small><h3>Básico</h3><p>Para tener tus obligaciones controladas, sin sorpresas.</p>
-      <ul><li>Recordatorio de vencimientos</li><li>VEP mensual de monotributo</li><li>Control de tu categoría</li><li>Consultas por WhatsApp</li></ul>
+      <ul><li>Recordatorio de vencimientos</li><li>Recordatorio del pago mensual de monotributo</li><li>Seguimiento de tu categoría y facturación</li><li>Consultas por WhatsApp</li></ul>
       <a class="btn b4" href="#contacto" data-p="Plan Básico">Consultar</a></div>
     <div class="pl dk"><span class="rec">Recomendado</span><small>Para gestionar con tranquilidad</small><h3>Completo</h3><p>Para delegar más y entender cómo viene tu negocio cada mes.</p>
-      <ul><li>Todo lo del plan Básico</li><li>Facturación por tu cuenta</li><li>Planilla de ventas y gastos</li><li>Resumen mensual de tus números</li></ul>
+      <ul><li>Todo lo del plan Básico</li><li>Organización de tu facturación</li><li>Planilla de ventas y gastos</li><li>Resumen mensual de tus números</li></ul>
       <a class="btn b1" href="#contacto" data-p="Plan Completo">Consultar</a></div>
   </div>
   <p class="nota rv">Sin contratos largos ni letra chica. Te explicamos todo antes de empezar.</p>
@@ -232,8 +261,9 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
   <div class="rv">
     <details><summary>¿La primera consulta tiene costo?</summary><p>No. La charla inicial es sin cargo y sin compromiso: entendemos tu situación y te proponemos una solución.</p></details>
     <details><summary>¿Trabajan con clientes de otras localidades?</summary><p>Sí. Atendemos Azul y la zona de forma presencial, y también a distancia por WhatsApp y videollamada.</p></details>
+    <details><summary>¿Son contadores?</summary><p>No. Brindamos acompañamiento administrativo y organización de tus números. Lo que requiere un contador público matriculado, como liquidaciones o certificaciones, lo realiza un profesional habilitado.</p></details>
     <details><summary>No sé nada de impuestos, ¿puedo contratarlos igual?</summary><p>Por supuesto. Justamente ayudamos a quienes recién empiezan, y te explicamos cada paso de manera simple.</p></details>
-    <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos qué hacés. Si ya tenés CUIT y clave fiscal, mejor; si no, te ayudamos a tramitarlos.</p></details>
+    <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos qué hacés. Si ya tenés CUIT y clave fiscal, mejor; si no, te orientamos para tramitarlos.</p></details>
   </div>
 </div></section>
 
@@ -250,6 +280,7 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
     <select id="s"><option>Monotributo</option><option>Habilitación de local o actividad</option><option>Costos y precios</option><option>Planillas a medida</option><option>Seguimiento mensual</option><option>Otra consulta</option></select>
     <label for="m">Contanos brevemente (opcional)</label><textarea id="m" placeholder="Qué hacés y qué te gustaría ordenar"></textarea>
     <button class="btn b1" type="submit">Enviar por WhatsApp</button>
+    <p class="pv">Al enviar se abre WhatsApp con tu consulta. Esta web no guarda tus datos.</p>
   </form>
 </div></section>
 </main>
@@ -258,7 +289,7 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
   <div><a class="logo" href="#inicio">JM Administración</a></div>
   <div><a href="https://www.instagram.com/jm_administracion/" target="_blank" rel="noopener">Instagram</a><a id="fw" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
   <div>© 2026 · Azul, Buenos Aires</div>
-</div></footer>
+</div><div class="wrap dsc">JM Administración brinda servicios de apoyo administrativo y no reemplaza el asesoramiento de un contador público matriculado.</div></footer>
 
 <a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/></svg></a>
 
