@@ -25,24 +25,24 @@ h2{font-size:clamp(2.2rem,4.6vw,3.7rem)}
 h3{font-size:1.35rem;letter-spacing:-.02em;line-height:1.2}
 .kicker{display:block;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-d);margin-bottom:22px}
 .lead{font-size:1.15rem;color:var(--mute);max-width:560px}
-section{padding:130px 0}
+section{padding:104px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 34px;border-radius:999px;font:600 .95rem var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:.25s}
 .b1{background:var(--teal);color:var(--navy)}.b1:hover{background:var(--teal-l)}
 .b2{border-color:rgba(255,255,255,.35);color:#fff}.b2:hover{background:rgba(255,255,255,.1)}
 .b3{background:var(--navy);color:#fff}.b3:hover{background:var(--navy2)}
 .b4{border-color:var(--line);color:var(--navy)}.b4:hover{border-color:var(--navy)}
 /* header */
-header{position:fixed;inset:0 0 auto;z-index:50;transition:.35s}
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .5s ease,box-shadow .5s ease}
 header.s{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:88px;transition:.35s}header.s .bar{height:72px}
-.logo{font-size:1.2rem;font-weight:600;letter-spacing:-.02em;text-decoration:none;color:#fff;display:flex;align-items:center;gap:9px}
+.logo{font-size:1.2rem;font-weight:600;letter-spacing:-.02em;text-decoration:none;color:#fff;display:flex;align-items:center;gap:9px;transition:color .5s ease}
 .logo::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--teal)}
 header.s .logo{color:var(--navy)}
 nav{display:flex;align-items:center;gap:38px}
-nav a{font-size:.93rem;font-weight:500;text-decoration:none;color:rgba(255,255,255,.82)}nav a:hover{color:#fff}
+nav a{font-size:.93rem;font-weight:500;text-decoration:none;color:rgba(255,255,255,.82);transition:color .5s ease}nav a:hover{color:#fff}
 header.s nav a{color:var(--mute)}header.s nav a:hover{color:var(--navy)}
-nav .btn{padding:12px 26px;font-size:.88rem;background:#fff;color:var(--navy)}header.s nav .btn{background:var(--navy);color:#fff}
-.bur{display:none;background:0;border:0;padding:8px;cursor:pointer}.bur i{display:block;width:26px;height:1.5px;background:#fff;margin:7px 0}header.s .bur i{background:var(--navy)}
+nav .btn{padding:12px 26px;font-size:.88rem;background:#fff;color:var(--navy);transition:background .5s ease,color .5s ease}header.s nav .btn{background:var(--navy);color:#fff}
+.bur{display:none;background:0;border:0;padding:8px;cursor:pointer}.bur i{display:block;width:26px;height:1.5px;background:#fff;margin:7px 0;transition:background .5s ease}header.s .bur i{background:var(--navy)}
 /* hero */
 .hero{background:var(--navy);padding:190px 0 120px;color:#fff;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;width:760px;height:760px;right:-260px;top:-260px;background:radial-gradient(circle,rgba(63,184,176,.2),transparent 65%)}
@@ -84,7 +84,7 @@ input[type=range]::-moz-range-thumb{height:16px;width:16px;border-radius:50%;bac
 .sv:nth-child(n+4){grid-column:span 3}
 .sv:hover{background:var(--navy);transform:translateY(-6px)}
 .sv:hover h3,.sv:hover .n{color:#fff}.sv:hover p{color:#b4c4dc}.sv:hover .n{color:var(--teal-l)}
-.n{font-family:var(--serif);font-size:1.7rem;color:var(--teal-d);display:block;margin-bottom:60px;transition:.3s}
+.n{font-family:var(--serif);font-size:1.7rem;color:var(--teal-d);display:block;margin-bottom:40px;transition:.3s}
 .sv h3{margin-bottom:12px;transition:.3s}.sv p{color:var(--mute);font-size:.98rem;transition:.3s}
 /* process */
 .proc{background:var(--cream)}
@@ -95,7 +95,8 @@ input[type=range]::-moz-range-thumb{height:16px;width:16px;border-radius:50%;bac
 /* plans */
 .plans{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:70px}
 .pl{border:1px solid var(--line);border-radius:30px;padding:52px 46px;display:flex;flex-direction:column}
-.pl.dk{background:var(--navy);border-color:var(--navy);color:#cfdbee}
+.pl.dk{background:var(--navy);border-color:var(--navy);color:#cfdbee;position:relative;box-shadow:0 0 0 2px var(--teal),0 40px 70px -26px rgba(63,184,176,.45)}
+.rec{position:absolute;top:-14px;right:36px;background:var(--teal);color:var(--navy);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:99px}
 .pl small{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-d)}.pl.dk small{color:var(--teal-l)}
 .pl h3{font:400 2.8rem/1.1 var(--serif);letter-spacing:-.01em;margin:10px 0 12px}.pl.dk h3{color:#fff}
 .pl>p{color:var(--mute);margin-bottom:30px}.pl.dk>p{color:#9fb3d1}
@@ -120,7 +121,7 @@ summary::-webkit-details-marker{display:none}summary::after{content:"+";font-wei
 details[open] summary::after{transform:rotate(45deg)}
 details p{color:var(--mute);margin-top:14px;max-width:560px}
 /* contact */
-.ct{background:var(--navy);color:#fff;padding:130px 0}
+.ct{background:var(--navy);color:#fff;padding:104px 0}
 .ct h2{color:#fff}.ct h2 em{color:var(--teal-l)}.ct .kicker{color:var(--teal-l)}.ct .lead{color:#b4c4dc;margin-top:24px}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
 .inf{margin-top:46px;display:grid;gap:18px;font-size:.97rem;color:#cfdbee}.inf b{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-l);margin-bottom:2px}
@@ -132,19 +133,19 @@ textarea{min-height:100px;resize:vertical}form .btn{width:100%}
 footer{background:#071526;color:#8ea3c0;padding:48px 0;font-size:.9rem}
 .ft{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 footer .logo{color:#fff}.ft div:last-child{display:flex;gap:30px}footer a{text-decoration:none}footer a:hover{color:#fff}
-.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.3);transition:.2s}.wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:52px;height:52px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.18);transition:.2s}.wa:hover{transform:scale(1.08)}.wa svg{width:27px;height:27px;fill:#fff}
 .rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
 @media(max-width:960px){
 section,.ct{padding:84px 0}.wrap{padding:0 22px}
 .hero{padding:140px 0 80px}.hero .wrap,.ab,.fq,.cg,.plans{grid-template-columns:1fr;gap:56px}
 .sim{padding:28px 22px}.facts{gap:26px;flex-wrap:wrap}
-.grid6{grid-template-columns:1fr}.sv,.sv:nth-child(n+4){grid-column:auto}.n{margin-bottom:36px}
+.grid6{grid-template-columns:1fr}.sv,.sv:nth-child(n+4){grid-column:auto}.n{margin-bottom:26px}
 .steps{grid-template-columns:1fr 1fr}.pl{padding:38px 28px}form{padding:30px 24px}
 .bur{display:block}
 nav{position:absolute;top:80px;left:14px;right:14px;background:#fff;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.25);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;display:none}
 nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bottom:1px solid var(--line)}nav .btn,header nav .btn{margin-top:18px;border:0;text-align:center;background:var(--navy);color:#fff}
 }
-@media(max-width:560px){.steps,.so{grid-template-columns:1fr}.acts .btn{width:100%}}
+@media(max-width:560px){.steps,.so{grid-template-columns:1fr}.acts .btn{width:100%}.sv,.sv:nth-child(n+4){padding:28px 24px}.n{margin-bottom:16px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -158,18 +159,18 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
 <main id="inicio">
 <div class="hero"><div class="wrap">
   <div>
-    <h1>Tu negocio, <em>en orden</em> y listo para crecer.</h1>
-    <p class="lead">Nos ocupamos del monotributo, los costos y la gestión mensual de tu emprendimiento, con trato cercano y sin vueltas. Vos hacés lo que mejor sabés; nosotros ordenamos el resto.</p>
+    <h1>Sabé cuánto ganás y <em>ordená tu negocio.</em></h1>
+    <p class="lead">Monotributo, costos y gestión mensual para emprendedores de Azul, con trato cercano y sin vueltas.</p>
     <div class="acts"><a class="btn b1" href="#contacto">Pedí tu consulta sin cargo</a><a class="btn b2" href="#servicios">Conocé los servicios</a></div>
     <div class="facts"><div><b>Azul y la zona</b><span>Presencial y a distancia</span></div><div><b>Primera charla</b><span>Sin costo ni compromiso</span></div></div>
   </div>
   <div class="sim">
-    <div class="st"><div><small>Herramienta práctica</small><h3>Simulador de punto de equilibrio</h3></div><span class="bdg">En vivo</span></div>
+    <div class="st"><div><small>Calculá tu meta del mes</small><h3>¿Cuánto tenés que vender?</h3></div><span class="bdg">Gratis</span></div>
     <div class="sr"><div class="sl"><span>Gastos fijos mensuales</span><b id="lf">$ 800.000</b></div><input type="range" id="rf" min="150000" max="3000000" step="50000" value="800000" aria-label="Gastos fijos mensuales"></div>
     <div class="sr"><div class="sl"><span>Margen promedio sobre ventas</span><b id="lm">35%</b></div><input type="range" id="rm" min="10" max="75" step="1" value="35" aria-label="Margen promedio"></div>
     <div class="sr"><div class="sl"><span>Ganancia que querés lograr</span><b id="lg">$ 600.000</b></div><input type="range" id="rg" min="100000" max="3000000" step="50000" value="600000" aria-label="Ganancia deseada"></div>
     <div class="so"><div><small>Ventas mínimas para no perder</small><strong id="oe">$ 2.285.714</strong></div><div class="hi"><small>Ventas para tu ganancia</small><strong id="om">$ 4.000.000</strong></div></div>
-    <p class="sf">Cálculo orientativo. <a href="#contacto" id="sl">Calculemos el margen real de tu rubro →</a></p>
+    <p class="sf">Es una estimación. En tu consulta calculamos tus costos reales y el precio justo para cada producto. <a href="#contacto" id="sl">Quiero conocer mis números →</a></p>
   </div>
 </div></div>
 
@@ -181,11 +182,11 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
 <section id="servicios" style="padding-top:0"><div class="wrap">
   <div class="head rv"><div><span class="kicker">Servicios</span><h2>Lo que hacemos <em>por tu negocio</em></h2></div><p class="lead">Cinco áreas pensadas para emprendedores, monotributistas y comercios que necesitan ordenar su parte administrativa.</p></div>
   <div class="grid6 rv">
-    <div class="sv"><span class="n">01</span><h3>Monotributo</h3><p>Alta, recategorización, facturación y VEP mensual. Te avisamos antes de cada vencimiento para que no pagues de más ni te sorprendas.</p></div>
-    <div class="sv"><span class="n">02</span><h3>Habilitaciones</h3><p>Te acompañamos paso a paso para habilitar tu local o tu actividad, con los trámites claros y sin vueltas innecesarias.</p></div>
-    <div class="sv"><span class="n">03</span><h3>Costos y precios</h3><p>Calculamos cuánto te cuesta realmente cada producto o servicio, para que sepas qué precio poner y cuánto ganás.</p></div>
-    <div class="sv"><span class="n">04</span><h3>Planillas a medida</h3><p>Ventas, gastos y stock en Excel o Google Sheets, armados para tu tipo de negocio y simples de usar todos los días.</p></div>
-    <div class="sv"><span class="n">05</span><h3>Seguimiento mensual</h3><p>Revisamos tus números cada mes y te contamos cómo venís, qué mejorar y qué se viene, en lenguaje claro.</p></div>
+    <div class="sv"><span class="n">01</span><h3>Monotributo</h3><p>Alta, recategorización, facturación y VEP mensual. Te avisamos antes de cada vencimiento.</p></div>
+    <div class="sv"><span class="n">02</span><h3>Habilitaciones</h3><p>Te acompañamos paso a paso para habilitar tu local o tu actividad.</p></div>
+    <div class="sv"><span class="n">03</span><h3>Costos y precios</h3><p>Calculamos cuánto te cuesta cada producto para que sepas qué precio poner y cuánto ganás.</p></div>
+    <div class="sv"><span class="n">04</span><h3>Planillas a medida</h3><p>Ventas, gastos y stock en Excel o Google Sheets, a medida de tu negocio y simples de usar.</p></div>
+    <div class="sv"><span class="n">05</span><h3>Seguimiento mensual</h3><p>Revisamos tus números cada mes y te explicamos cómo venís, en lenguaje claro.</p></div>
   </div>
 </div></section>
 
@@ -202,10 +203,10 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
 <section id="planes"><div class="wrap">
   <div class="rv" style="text-align:center"><span class="kicker">Planes de seguimiento mensual</span><h2>Elegí cuánto querés <em>delegar</em></h2><p class="lead" style="margin:22px auto 0">Dos opciones simples. Consultanos por los valores actualizados.</p></div>
   <div class="plans rv">
-    <div class="pl"><small>Para estar al día</small><h3>Básico</h3><p>Ideal si tu actividad es simple y querés tener tus obligaciones controladas.</p>
+    <div class="pl"><small>Para estar al día</small><h3>Básico</h3><p>Para tener tus obligaciones controladas, sin sorpresas.</p>
       <ul><li>Recordatorio de vencimientos</li><li>VEP mensual de monotributo</li><li>Control de tu categoría</li><li>Consultas por WhatsApp</li></ul>
       <a class="btn b4" href="#contacto" data-p="Plan Básico">Consultar</a></div>
-    <div class="pl dk"><small>Para gestionar con tranquilidad</small><h3>Completo</h3><p>Para quienes quieren delegar más y entender cómo viene el negocio cada mes.</p>
+    <div class="pl dk"><span class="rec">Recomendado</span><small>Para gestionar con tranquilidad</small><h3>Completo</h3><p>Para delegar más y entender cómo viene tu negocio cada mes.</p>
       <ul><li>Todo lo del plan Básico</li><li>Facturación por tu cuenta</li><li>Planilla de ventas y gastos</li><li>Resumen mensual de tus números</li></ul>
       <a class="btn b1" href="#contacto" data-p="Plan Completo">Consultar</a></div>
   </div>
@@ -213,15 +214,15 @@ nav.o{display:flex}nav a,header nav a{color:var(--navy);padding:16px 0;border-bo
 </div></section>
 
 <section id="nosotros" class="about"><div class="wrap ab">
-  <div class="mf rv"><blockquote>“Cuando sabés cuánto te cuesta operar y cuánto deja cada venta, dejás de trabajar a ciegas y empezás a decidir con seguridad.”</blockquote><div><p><b>Azul, Buenos Aires</b><span>Y toda la zona</span></p><p><b>Presencial y remoto</b><span>Como te quede cómodo</span></p></div></div>
+  <div class="mf rv"><blockquote>“Cuando conocés tus números, dejás de adivinar y empezás a decidir.”</blockquote><div><p><b>Azul, Buenos Aires</b><span>Y toda la zona</span></p><p><b>Presencial y remoto</b><span>Como te quede cómodo</span></p></div></div>
   <div class="rv">
     <span class="kicker">Por qué JM</span>
     <h2>Administración <em>cercana</em>, hecha para emprendedores</h2>
-    <p class="lead">Somos de Azul, con formación en Administración de PyMEs, y trabajamos con quienes recién empiezan o manejan un negocio chico. Entendemos tus tiempos y tus dudas, y te hablamos sin tecnicismos.</p>
+    <p class="lead">Somos de Azul, con formación en Administración de PyMEs. Trabajamos con quienes recién empiezan o manejan un negocio chico, y te hablamos sin tecnicismos.</p>
     <div class="vals">
-      <div><i>i.</i><p><b>Trato directo</b><span>Hablás siempre con quienes hacen el trabajo, por WhatsApp o en persona.</span></p></div>
-      <div><i>ii.</i><p><b>Lenguaje claro</b><span>Cada trámite y cada número, explicado de forma simple.</span></p></div>
-      <div><i>iii.</i><p><b>Herramientas a tu medida</b><span>Planillas y controles pensados para tu rubro, no plantillas genéricas.</span></p></div>
+      <div><i>i.</i><p><b>Trato directo</b><span>Hablás siempre con quienes hacen el trabajo.</span></p></div>
+      <div><i>ii.</i><p><b>Lenguaje claro</b><span>Cada trámite y cada número, explicado simple.</span></p></div>
+      <div><i>iii.</i><p><b>Herramientas a tu medida</b><span>Planillas pensadas para tu rubro, no plantillas genéricas.</span></p></div>
     </div>
   </div>
 </div></section>
